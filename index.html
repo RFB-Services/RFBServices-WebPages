@@ -1,0 +1,2710 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>RFB Services | Turn Tech Problems Into Business Advantages</title>
+  <meta name="description" content="Independent IT advice, websites and support for businesses, charities and schools. Plain English. Hands-on. Based in the New England Region.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --surf: #FFFFFF;
+      --surf-subtle: #F1F5F9;
+      --ink: #0F172A;
+      --mut: #475569;
+      --mut-light: #64748B;
+      --brand: #002352;
+      --brand-hover: #0B356D;
+      --brand-tint: rgba(0, 35, 82, 0.06);
+      --gold: #8C6D32;
+      --gold-bright: #B8934A;
+      --gold-tint: rgba(140, 109, 50, 0.1);
+      --line: #E2E8F0;
+      --line-strong: #CBD5E1;
+      --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04);
+      --shadow-md: 0 4px 16px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+      --shadow-lg: 0 16px 36px -6px rgba(0, 35, 82, 0.1), 0 4px 12px -2px rgba(15, 23, 42, 0.05);
+      --max: 1200px;
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --header-h: 76px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--header-h) + 20px);
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font: 400 16px/1.65 "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    /* Typography */
+    h1, h2, h3, h4 {
+      color: var(--ink);
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+    }
+
+    h1 {
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 800;
+      line-height: 1.08;
+      color: var(--brand);
+    }
+
+    h2 {
+      font-size: clamp(28px, 3.6vw, 40px);
+      color: var(--brand);
+    }
+
+    h3 {
+      font-size: 20px;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0 0 16px;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      color: var(--brand);
+      transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--gold-bright);
+      outline-offset: 2px;
+      border-radius: 6px;
+    }
+
+    .wrap {
+      max-width: var(--max);
+      margin-inline: auto;
+      padding-inline: 24px;
+    }
+
+    .skip {
+      position: absolute;
+      inset-inline-start: -999px;
+      background: var(--brand);
+      color: #fff;
+      font-weight: 600;
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
+      z-index: 100;
+      text-decoration: none;
+    }
+
+    .skip:focus {
+      inset-inline-start: 12px;
+      top: 12px;
+    }
+
+    /* Eyebrow & Section Headers */
+    .eyebrow-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--surf);
+      border: 1px solid var(--line);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--brand);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 22px;
+    }
+
+    .eyebrow-pill .dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold-bright);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 20px;
+      height: 2px;
+      background: var(--gold-bright);
+      border-radius: 2px;
+    }
+
+    .sec-head {
+      max-width: 720px;
+      margin-bottom: 44px;
+    }
+
+    .sec-head.center {
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .sec-head.center .eyebrow {
+      justify-content: center;
+    }
+
+    .lead {
+      font-size: clamp(17px, 2vw, 19px);
+      color: var(--mut);
+      line-height: 1.6;
+      margin-top: 14px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 11px 22px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--brand);
+      background: var(--brand);
+      color: #FFFFFF;
+      font: 600 15px/1 "Plus Jakarta Sans", sans-serif;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      white-space: nowrap;
+    }
+
+    .btn:hover {
+      background: var(--brand-hover);
+      border-color: var(--brand-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn.sec {
+      background: var(--surf);
+      color: var(--brand);
+      border-color: var(--line-strong);
+    }
+
+    .btn.sec:hover {
+      background: var(--surf-subtle);
+      border-color: var(--brand);
+    }
+
+    .btn.ghost {
+      background: transparent;
+      color: var(--mut);
+      border-color: transparent;
+      box-shadow: none;
+    }
+
+    .btn.ghost:hover {
+      color: var(--brand);
+      background: var(--brand-tint);
+      transform: none;
+    }
+
+    .btn.sm {
+      min-height: 40px;
+      padding: 8px 16px;
+      font-size: 14px;
+    }
+
+    .btn.gold {
+      background: var(--gold-bright);
+      border-color: var(--gold-bright);
+      color: #0F172A;
+      font-weight: 700;
+    }
+
+    .btn.gold:hover {
+      background: #caa456;
+      border-color: #caa456;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* Sticky Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(248, 250, 252, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: var(--header-h);
+      gap: 16px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      color: var(--brand);
+      text-decoration: none;
+    }
+
+    .logo svg {
+      height: 30px;
+      width: auto;
+      display: block;
+    }
+
+    .dnav {
+      display: none;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .dnav > a,
+    .nav-drop-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--mut);
+      text-decoration: none;
+      font: 600 14px/1 "Plus Jakarta Sans", sans-serif;
+      padding: 10px 12px;
+      border-radius: var(--radius-sm);
+      background: transparent;
+      border: 0;
+      cursor: pointer;
+    }
+
+    .dnav > a:hover,
+    .nav-drop-btn:hover,
+    .dnav > a.active {
+      color: var(--brand);
+      background: var(--brand-tint);
+    }
+
+    /* Solutions Mega-Dropdown */
+    .nav-drop {
+      position: relative;
+    }
+
+    .nav-drop-panel {
+      position: absolute;
+      top: calc(100% + 10px);
+      left: -24px;
+      width: 580px;
+      background: var(--surf);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      padding: 16px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(6px);
+      transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+      z-index: 60;
+    }
+
+    .nav-drop.open .nav-drop-panel,
+    .nav-drop:hover .nav-drop-panel {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .drop-item {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      padding: 10px 12px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      border: 1px solid transparent;
+    }
+
+    .drop-item:hover {
+      background: var(--bg);
+      border-color: var(--line);
+    }
+
+    .drop-item strong {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--brand);
+    }
+
+    .drop-item span {
+      font-size: 12.5px;
+      color: var(--mut);
+      line-height: 1.4;
+    }
+
+    .dcta {
+      display: none;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .menu-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: var(--surf);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      color: var(--brand);
+      cursor: pointer;
+    }
+
+    @media (min-width: 1024px) {
+      .menu-btn, .drawer, .scrim {
+        display: none !important;
+      }
+      .dnav {
+        display: flex;
+      }
+      .dcta {
+        display: flex;
+      }
+    }
+
+    /* Mobile Drawer */
+    .drawer {
+      position: fixed;
+      inset: 0 auto 0 0;
+      width: min(340px, 88vw);
+      background: var(--surf);
+      z-index: 80;
+      padding: 20px 24px 32px;
+      transform: translateX(-100%);
+      visibility: hidden;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.28s;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .drawer.open {
+      transform: none;
+      visibility: visible;
+    }
+
+    .drawer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 12px;
+    }
+
+    .drawer a:not(.btn) {
+      padding: 13px 4px;
+      border-bottom: 1px solid var(--line);
+      color: var(--ink);
+      font-weight: 600;
+      font-size: 15px;
+      text-decoration: none;
+    }
+
+    .drawer a:not(.btn):hover {
+      color: var(--brand);
+    }
+
+    .drawer-actions {
+      display: grid;
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .close-btn {
+      width: 40px;
+      height: 40px;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-sm);
+      font-size: 22px;
+      line-height: 1;
+      color: var(--brand);
+      cursor: pointer;
+    }
+
+    .scrim {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.45);
+      backdrop-filter: blur(2px);
+      z-index: 70;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .scrim.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Sections */
+    section {
+      padding: 72px 0;
+    }
+
+    @media (min-width: 900px) {
+      section {
+        padding: 96px 0;
+      }
+    }
+
+    .sec-white {
+      background: var(--surf);
+      border-block: 1px solid var(--line);
+    }
+
+    /* Asymmetric Split Hero (GBTech.ai inspired) */
+    .hero {
+      padding: 48px 0 72px;
+      background:
+        radial-gradient(circle at 88% 12%, rgba(184, 147, 74, 0.08), transparent 36%),
+        radial-gradient(circle at 12% 80%, rgba(0, 35, 82, 0.05), transparent 40%),
+        var(--bg);
+      border-bottom: 1px solid var(--line);
+    }
+
+    @media (min-width: 960px) {
+      .hero {
+        padding: 76px 0 92px;
+      }
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 44px;
+      align-items: center;
+    }
+
+    @media (min-width: 960px) {
+      .hero-grid {
+        grid-template-columns: 1.28fr 0.92fr;
+        gap: 56px;
+      }
+    }
+
+    .hero-lead {
+      font-size: clamp(17px, 1.9vw, 19.5px);
+      color: var(--mut);
+      line-height: 1.62;
+      max-width: 580px;
+      margin: 20px 0 30px;
+    }
+
+    .trust-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 24px;
+      margin-top: 36px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .trust-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--mut);
+    }
+
+    .trust-item svg {
+      width: 17px;
+      height: 17px;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* Hero Right Column: Interactive Quick Triage Dashboard Card */
+    .triage-shell {
+      position: relative;
+    }
+
+    .triage-badge-float {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--brand);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: 999px;
+      box-shadow: var(--shadow-md);
+      margin-bottom: -14px;
+      margin-left: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .triage-badge-float span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #4ADE80;
+    }
+
+    .triage-card {
+      background: var(--surf);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 26px 24px 22px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .triage-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 14px;
+      margin-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .triage-head span {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--mut-light);
+    }
+
+    .triage-head strong {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gold);
+      background: var(--gold-tint);
+      padding: 3px 9px;
+      border-radius: 999px;
+    }
+
+    .pillar-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .pillar-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 13px 14px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--line);
+      background: var(--bg);
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.18s ease;
+    }
+
+    .pillar-row:hover {
+      background: var(--surf);
+      border-color: var(--brand);
+      box-shadow: var(--shadow-sm);
+      transform: translateX(3px);
+    }
+
+    .pillar-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: var(--surf);
+      border: 1px solid var(--line);
+      font-size: 12px;
+      font-weight: 800;
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .pillar-row:hover .pillar-num {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: #fff;
+    }
+
+    .pillar-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .pillar-body strong {
+      display: block;
+      font-size: 14.5px;
+      font-weight: 700;
+      color: var(--brand);
+      margin-bottom: 2px;
+    }
+
+    .pillar-body p {
+      font-size: 13px;
+      color: var(--mut);
+      line-height: 1.45;
+      margin: 0;
+    }
+
+    .pillar-arrow {
+      color: var(--mut-light);
+      font-size: 16px;
+      font-weight: 700;
+      align-self: center;
+    }
+
+    .pillar-row:hover .pillar-arrow {
+      color: var(--brand);
+    }
+
+    .triage-foot {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      color: var(--mut);
+    }
+
+    .triage-foot a {
+      font-weight: 700;
+      text-decoration: none;
+      color: var(--brand);
+    }
+
+    .triage-foot a:hover {
+      text-decoration: underline;
+    }
+
+    /* Interactive Problem-First Tabbed Switcher (GBTech signature) */
+    .tabs-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .tab-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 11px 18px;
+      border-radius: 999px;
+      border: 1px solid var(--line-strong);
+      background: var(--surf);
+      color: var(--mut);
+      font: 600 14px/1.2 "Plus Jakarta Sans", sans-serif;
+      cursor: pointer;
+      transition: all 0.18s ease;
+    }
+
+    .tab-btn:hover {
+      border-color: var(--brand);
+      color: var(--brand);
+    }
+
+    .tab-btn[aria-selected="true"] {
+      background: var(--brand);
+      border-color: var(--brand);
+      color: #FFFFFF;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .tab-btn .tab-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold-bright);
+      opacity: 0.75;
+    }
+
+    .tab-btn[aria-selected="true"] .tab-dot {
+      background: #FCD34D;
+      opacity: 1;
+    }
+
+    .problem-panel {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      display: grid;
+      gap: 32px;
+      box-shadow: var(--shadow-sm);
+      animation: fadePanel 0.22s ease;
+    }
+
+    @keyframes fadePanel {
+      from { opacity: 0.4; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (min-width: 860px) {
+      .problem-panel {
+        grid-template-columns: 1.15fr 0.85fr;
+        padding: 40px;
+        gap: 48px;
+        align-items: start;
+      }
+    }
+
+    .panel-quote {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold);
+      background: var(--gold-tint);
+      padding: 5px 12px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+    }
+
+    .panel-left h3 {
+      font-size: clamp(22px, 2.6vw, 28px);
+      color: var(--brand);
+      margin-bottom: 12px;
+    }
+
+    .panel-left p {
+      color: var(--mut);
+      font-size: 16px;
+      line-height: 1.65;
+      margin-bottom: 20px;
+    }
+
+    .you-get-box {
+      background: var(--surf);
+      border-left: 3px solid var(--gold-bright);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 16px 18px;
+      margin-bottom: 24px;
+      border-top: 1px solid var(--line);
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .you-get-box small {
+      display: block;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      margin-bottom: 4px;
+    }
+
+    .you-get-box strong {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.5;
+      display: block;
+    }
+
+    .panel-right {
+      background: var(--surf);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+
+    .panel-right h4 {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--mut-light);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .check-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 13px;
+    }
+
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      font-size: 14.5px;
+      color: var(--ink);
+      line-height: 1.45;
+    }
+
+    .check-list svg {
+      width: 18px;
+      height: 18px;
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* 3-Step How We Work Process Strip */
+    .process-grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    @media (min-width: 820px) {
+      .process-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+      }
+    }
+
+    .step-card {
+      background: var(--surf);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 30px 28px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .step-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--brand);
+      color: #fff;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+    }
+
+    .step-tag {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+    }
+
+    .step-card h3 {
+      color: var(--brand);
+      margin-bottom: 10px;
+    }
+
+    .step-card p {
+      color: var(--mut);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* 3-Tier Engagement Cards (GBTech 'Three ways to work with us') */
+    .tiers-grid {
+      display: grid;
+      gap: 24px;
+      align-items: stretch;
+    }
+
+    @media (min-width: 900px) {
+      .tiers-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+      }
+    }
+
+    .tier-card {
+      background: var(--surf);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .tier-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .tier-card.featured {
+      border: 2px solid var(--brand);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .tier-badge {
+      position: absolute;
+      top: -13px;
+      left: 28px;
+      background: var(--brand);
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      padding: 5px 12px;
+      border-radius: 999px;
+    }
+
+    .tier-price-tag {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gold);
+      background: var(--gold-tint);
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 14px;
+      align-self: flex-start;
+    }
+
+    .tier-card h3 {
+      font-size: 22px;
+      color: var(--brand);
+      margin-bottom: 10px;
+    }
+
+    .tier-desc {
+      font-size: 15px;
+      color: var(--mut);
+      line-height: 1.55;
+      margin-bottom: 22px;
+    }
+
+    .tier-divider {
+      height: 1px;
+      background: var(--line);
+      margin-bottom: 22px;
+    }
+
+    .tier-list {
+      list-style: none;
+      margin: 0 0 28px;
+      padding: 0;
+      display: grid;
+      gap: 12px;
+      flex: 1;
+    }
+
+    .tier-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 14.5px;
+      color: var(--ink);
+      line-height: 1.45;
+    }
+
+    .tier-list svg {
+      width: 17px;
+      height: 17px;
+      color: var(--gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .tier-card .btn {
+      width: 100%;
+    }
+
+    /* Full Services Directory Accordion / Grid */
+    .services-catalog {
+      margin-top: 56px;
+      padding-top: 48px;
+      border-top: 1px solid var(--line);
+    }
+
+    .catalog-head {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .catalog-grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    @media (min-width: 768px) {
+      .catalog-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .cat-item {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 22px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .cat-item h4 {
+      font-size: 17px;
+      color: var(--brand);
+      margin-bottom: 4px;
+    }
+
+    .cat-item p {
+      font-size: 14px;
+      color: var(--mut);
+      margin: 0;
+    }
+
+    .cat-out {
+      font-size: 13.5px;
+      color: var(--mut);
+      font-style: italic;
+      line-height: 1.5;
+      padding-top: 10px;
+      border-top: 1px dashed var(--line-strong);
+    }
+
+    .cat-out span {
+      font-weight: 600;
+      font-style: normal;
+      color: var(--brand);
+      margin-right: 4px;
+    }
+
+    /* Who We Help Industry Grid (GBTech 3x2 grid) */
+    .industry-grid {
+      display: grid;
+      gap: 20px;
+    }
+
+    @media (min-width: 680px) {
+      .industry-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1000px) {
+      .industry-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .ind-card {
+      background: var(--surf);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      padding: 26px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: var(--shadow-sm);
+      transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+    }
+
+    .ind-card:hover {
+      border-color: var(--brand);
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+
+    .ind-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      background: var(--brand-tint);
+      color: var(--brand);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+
+    .ind-card:hover .ind-icon {
+      background: var(--brand);
+      color: #fff;
+    }
+
+    .ind-card h3 {
+      font-size: 18px;
+      color: var(--brand);
+      margin-bottom: 8px;
+    }
+
+    .ind-card p {
+      font-size: 14.5px;
+      color: var(--mut);
+      line-height: 1.55;
+      margin-bottom: 18px;
+    }
+
+    .ind-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--brand);
+    }
+
+    .ind-card:hover .ind-link {
+      color: var(--gold);
+    }
+
+    /* High-Contrast Deep Navy Band: The RFB Standard */
+    .navy-band {
+      background: var(--brand);
+      color: #E2E8F0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .navy-band::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 85% 20%, rgba(184, 147, 74, 0.16), transparent 45%);
+      pointer-events: none;
+    }
+
+    .navy-band .eyebrow {
+      color: #E5C47B;
+    }
+
+    .navy-band .eyebrow::before {
+      background: #E5C47B;
+    }
+
+    .navy-band h2 {
+      color: #FFFFFF;
+    }
+
+    .navy-band .lead {
+      color: #CBD5E1;
+    }
+
+    .standard-grid {
+      display: grid;
+      gap: 22px;
+      margin-top: 40px;
+    }
+
+    @media (min-width: 860px) {
+      .standard-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .std-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-top: 3px solid #E5C47B;
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+    }
+
+    .std-card h3 {
+      color: #FFFFFF;
+      font-size: 19px;
+      margin-bottom: 10px;
+    }
+
+    .std-card p {
+      color: #CBD5E1;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .std-practice {
+      margin-top: 36px;
+      padding: 28px;
+      background: rgba(15, 23, 42, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius-md);
+      display: grid;
+      gap: 16px;
+    }
+
+    @media (min-width: 820px) {
+      .std-practice {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px 36px;
+      }
+    }
+
+    .std-practice-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 15px;
+      color: #F1F5F9;
+    }
+
+    .std-practice-item svg {
+      width: 19px;
+      height: 19px;
+      color: #E5C47B;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* About / Clarity Split Section */
+    .about-split {
+      display: grid;
+      gap: 40px;
+      align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .about-split {
+        grid-template-columns: 1fr 1fr;
+        gap: 64px;
+      }
+    }
+
+    .metrics-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .metric-box strong {
+      display: block;
+      font-size: clamp(22px, 2.5vw, 28px);
+      font-weight: 800;
+      color: var(--brand);
+      letter-spacing: -0.02em;
+    }
+
+    .metric-box span {
+      font-size: 13px;
+      color: var(--mut);
+      line-height: 1.35;
+      display: block;
+      margin-top: 2px;
+    }
+
+    .manifesto-card {
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+    }
+
+    .manifesto-card blockquote {
+      margin: 0 0 20px;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--brand);
+      line-height: 1.5;
+    }
+
+    /* Low-Friction Embedded Contact Section */
+    .contact-split {
+      display: grid;
+      gap: 40px;
+      align-items: start;
+    }
+
+    @media (min-width: 920px) {
+      .contact-split {
+        grid-template-columns: 0.92fr 1.08fr;
+        gap: 56px;
+      }
+    }
+
+    .contact-details {
+      display: grid;
+      gap: 18px;
+      margin-top: 28px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .c-detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .c-detail-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: 9px;
+      background: var(--surf);
+      border: 1px solid var(--line);
+      color: var(--brand);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .c-detail-item small {
+      display: block;
+      font-size: 11.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--mut-light);
+      margin-bottom: 2px;
+    }
+
+    .c-detail-item a,
+    .c-detail-item span {
+      font-size: 15.5px;
+      font-weight: 600;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .c-detail-item a:hover {
+      color: var(--brand);
+      text-decoration: underline;
+    }
+
+    .form-card {
+      background: var(--surf);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    @media (min-width: 640px) {
+      .form-card {
+        padding: 36px;
+      }
+    }
+
+    .form-row {
+      display: grid;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    @media (min-width: 600px) {
+      .form-row {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .field {
+      margin-bottom: 16px;
+    }
+
+    .form-row .field {
+      margin-bottom: 0;
+    }
+
+    label {
+      display: block;
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      min-height: 46px;
+      padding: 11px 14px;
+      border: 1px solid var(--line-strong);
+      border-radius: var(--radius-sm);
+      background: var(--bg);
+      color: var(--ink);
+      font: 400 15px/1.4 "Plus Jakarta Sans", sans-serif;
+      transition: border-color 0.16s ease, background-color 0.16s ease, box-shadow 0.16s ease;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      background: var(--surf);
+      border-color: var(--brand);
+      box-shadow: 0 0 0 3px rgba(0, 35, 82, 0.12);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+
+    .alert-box {
+      display: none;
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .alert-box.err {
+      display: block;
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+      color: #B91C1C;
+    }
+
+    .alert-box.ok {
+      display: block;
+      background: #F0FDF4;
+      border: 1px solid #BBF7D0;
+      color: #15803D;
+    }
+
+    .form-note {
+      margin-top: 12px;
+      font-size: 13px;
+      color: var(--mut-light);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Multi-Column B2B Footer */
+    footer {
+      background: var(--surf);
+      border-top: 1px solid var(--line);
+      padding: 64px 0 32px;
+      color: var(--mut);
+      font-size: 14.5px;
+    }
+
+    .footer-grid {
+      display: grid;
+      gap: 36px;
+      padding-bottom: 44px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr 1.1fr;
+        gap: 40px;
+      }
+    }
+
+    .footer-brand p {
+      margin-top: 14px;
+      max-width: 300px;
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--mut);
+    }
+
+    .footer-col h4 {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--brand);
+      margin-bottom: 16px;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+    }
+
+    .footer-col a {
+      color: var(--mut);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .footer-col a:hover {
+      color: var(--brand);
+    }
+
+    .footer-bottom {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px 24px;
+      padding-top: 24px;
+      font-size: 13px;
+      color: var(--mut-light);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+      }
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Clean Geometric RFB Services Brand SVG Symbol (No Dots) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="lg" viewBox="0 0 322 52">
+      <g fill="currentColor">
+        <path d="M4 8H28.5C36.8 8 42.5 12.6 42.5 19.8C42.5 25.8 38.4 30.1 31.8 31.2L43.5 44H33.2L22.6 31.8H12.4V44H4V8ZM12.4 14.8V25.2H27.6C31.8 25.2 34.2 23.1 34.2 19.9C34.2 16.8 31.8 14.8 27.6 14.8H12.4Z"/>
+        <path d="M51 8H86V15H59.4V22.8H82.5V29.6H59.4V44H51V8Z"/>
+        <path d="M94 8H119.5C127.4 8 132.5 11.8 132.5 17.6C132.5 21.6 130.1 24.4 126.2 25.6C131.1 26.8 134 30.1 134 34.6C134 40.6 128.6 44 120.2 44H94V8ZM102.4 14.5V22.6H118.2C121.9 22.6 124.1 21.1 124.1 18.5C124.1 15.9 121.9 14.5 118.2 14.5H102.4ZM102.4 28.8V37.5H119.2C123.2 37.5 125.5 36.1 125.5 33.2C125.5 30.3 123.2 28.8 119.2 28.8H102.4Z"/>
+      </g>
+      <text x="148" y="43.5" fill="currentColor" font-family="'Plus Jakarta Sans',sans-serif" font-size="31" font-weight="400" letter-spacing="-.01em">Services</text>
+    </symbol>
+  </svg>
+
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Sticky Header -->
+  <header>
+    <div class="wrap nav-bar">
+      <div class="nav-left">
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="drawer" aria-label="Open navigation menu">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <a class="logo" href="#home" aria-label="RFB Services home">
+          <svg viewBox="0 0 322 52" role="img" aria-label="RFB Services"><use href="#lg"/></svg>
+        </a>
+      </div>
+
+      <nav class="dnav" aria-label="Primary Navigation">
+        <div class="nav-drop" id="solDrop">
+          <button class="nav-drop-btn" type="button" aria-expanded="false" aria-haspopup="true">
+            Solutions
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="nav-drop-panel" role="menu">
+            <a class="drop-item" href="#problem-finder" data-select-tab="website">
+              <strong>Websites and online visibility</strong>
+              <span>Fast sites that rank across search engines and drive enquiries.</span>
+            </a>
+            <a class="drop-item" href="#problem-finder" data-select-tab="automation">
+              <strong>Automation &amp; admin</strong>
+              <span>Cut repeat quoting, scheduling and data entry.</span>
+            </a>
+            <a class="drop-item" href="#problem-finder" data-select-tab="strategy">
+              <strong>IT advice &amp; strategy</strong>
+              <span>Clear plan of what to fix, buy and skip.</span>
+            </a>
+            <a class="drop-item" href="#problem-finder" data-select-tab="policies">
+              <strong>IT policies for small businesses</strong>
+              <span>Practical cybersecurity, device &amp; data rules without red tape.</span>
+            </a>
+            <a class="drop-item" href="#problem-finder" data-select-tab="software">
+              <strong>IT recommendations</strong>
+              <span>Unbiased hardware, software, cloud &amp; vendor buying advice.</span>
+            </a>
+            <a class="drop-item" href="#problem-finder" data-select-tab="software">
+              <strong>Software &amp; POS selection</strong>
+              <span>Vendor-neutral comparison and clean setup.</span>
+            </a>
+            <a class="drop-item" href="#problem-finder" data-select-tab="managed">
+              <strong>Outsourced IT manager</strong>
+              <span>Accountable leadership &amp; co-management.</span>
+            </a>
+            <a class="drop-item" href="#services" style="grid-column: 1 / -1; background: var(--bg); border-color: var(--line);">
+              <strong>View full capability scope (10 services) &rarr;</strong>
+              <span>Explore every advisory, build, policy, recommendation and support service we offer.</span>
+            </a>
+          </div>
+        </div>
+
+        <a href="#standard">The RFB Standard</a>
+        <a href="#who-we-help">Who We Help</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="dcta">
+        <a class="btn sec sm" href="#services">See services</a>
+        <a class="btn sm" href="#contact">Start a conversation</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation Drawer -->
+  <div class="scrim" id="scrim"></div>
+  <nav class="drawer" id="drawer" aria-label="Mobile Navigation">
+    <div class="drawer-top">
+      <a class="logo" href="#home" aria-label="RFB Services home">
+        <svg viewBox="0 0 322 52" aria-hidden="true"><use href="#lg"/></svg>
+      </a>
+      <button class="close-btn" id="closeBtn" aria-label="Close menu">&times;</button>
+    </div>
+    <a href="#home">Home</a>
+    <a href="#problem-finder">Solutions</a>
+    <a href="#standard">The RFB Standard</a>
+    <a href="#who-we-help">Who We Help</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <div class="drawer-actions">
+      <a class="btn" href="#contact">Start a conversation</a>
+      <a class="btn sec" href="#services">See services</a>
+    </div>
+  </nav>
+
+  <main id="main" tabindex="-1">
+
+    <!-- 1. Asymmetric Split Hero Section -->
+    <section class="hero" id="home">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow-pill">
+            <span class="dot"></span>
+            Independent IT advice &middot; Websites &middot; Hands-on delivery
+          </div>
+          <h1>Turn Tech Problems Into Business Advantages.</h1>
+          <p class="hero-lead">
+            We help business owners sort out slow systems, bad tech decisions and tools that don’t talk to each other. Plain advice. Hands-on fixes.
+          </p>
+          <div class="btn-group">
+            <a class="btn" href="#contact">
+              Start a conversation
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a class="btn sec" href="#problem-finder">See how we can help</a>
+          </div>
+
+          <div class="trust-strip">
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Plain-English advice
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Zero vendor commissions
+            </div>
+            <div class="trust-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              New England &amp; Australia-wide
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Quick Tech Triage Card -->
+        <div class="triage-shell">
+          <div class="triage-badge-float">
+            <span></span>
+            Direct Advisor Access &middot; 1 Business Day Reply
+          </div>
+          <div class="triage-card">
+            <div class="triage-head">
+              <span>Core Advisory Pillars</span>
+              <strong>4 Focus Areas</strong>
+            </div>
+
+            <div class="pillar-list">
+              <a class="pillar-row" href="#problem-finder" data-select-tab="strategy">
+                <span class="pillar-num">01</span>
+                <div class="pillar-body">
+                  <strong>Advice you can act on</strong>
+                  <p>What to fix, buy and skip, with the cost up front.</p>
+                </div>
+                <span class="pillar-arrow" aria-hidden="true">&rarr;</span>
+              </a>
+
+              <a class="pillar-row" href="#problem-finder" data-select-tab="website">
+                <span class="pillar-num">02</span>
+                <div class="pillar-body">
+                  <strong>Websites that bring in enquiries</strong>
+                  <p>Fast, clear, and easy to find across search engines.</p>
+                </div>
+                <span class="pillar-arrow" aria-hidden="true">&rarr;</span>
+              </a>
+
+              <a class="pillar-row" href="#problem-finder" data-select-tab="managed">
+                <span class="pillar-num">03</span>
+                <div class="pillar-body">
+                  <strong>Support when it breaks</strong>
+                  <p>A real person who answers and sorts it out.</p>
+                </div>
+                <span class="pillar-arrow" aria-hidden="true">&rarr;</span>
+              </a>
+
+              <a class="pillar-row" href="#problem-finder" data-select-tab="software">
+                <span class="pillar-num">04</span>
+                <div class="pillar-body">
+                  <strong>Clear IT recommendations</strong>
+                  <p>Which software, hardware and systems to adopt for your business.</p>
+                </div>
+                <span class="pillar-arrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+
+            <div class="triage-foot">
+              <span>Not sure where to start?</span>
+              <a href="#contact" data-topic="Not sure yet">Ask a direct question &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Interactive "Start With the Problem, Not the Product" Tabbed Switcher -->
+    <section class="sec-white" id="problem-finder">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="eyebrow">Solutions</div>
+          <h2>What’s slowing your business down?</h2>
+          <p class="lead">Start with the problem, not the product. Pick the closest challenge below to see what we deliver—or jump straight to the enquiry form with your topic pre-filled.</p>
+        </div>
+
+        <div class="tabs-bar" role="tablist" aria-label="Business technology problems">
+          <button class="tab-btn" role="tab" aria-selected="true" data-tab="website">
+            <span class="tab-dot"></span>
+            Websites and online visibility
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="automation">
+            <span class="tab-dot"></span>
+            Admin &amp; automation
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="strategy">
+            <span class="tab-dot"></span>
+            IT strategy &amp; risk
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="policies">
+            <span class="tab-dot"></span>
+            IT policies for small businesses
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="software">
+            <span class="tab-dot"></span>
+            IT recommendations &amp; software
+          </button>
+          <button class="tab-btn" role="tab" aria-selected="false" data-tab="managed">
+            <span class="tab-dot"></span>
+            Outsourced IT management
+          </button>
+        </div>
+
+        <div class="problem-panel" id="problemPanel" role="tabpanel">
+          <!-- Populated dynamically by JS with default initial state rendered for immediate paint -->
+          <div class="panel-left">
+            <span class="panel-quote">“My website isn’t bringing in work”</span>
+            <h3>Websites and online visibility</h3>
+            <p>Design, build and search visibility setup in one place. No bloated agency retainers or confusing technical jargon—just a clean, high-converting site your customers actually find across search engines.</p>
+            <div class="you-get-box">
+              <small>What you get</small>
+              <strong>A fast site that shows up when people search online and turns visits into enquiries.</strong>
+            </div>
+            <div class="btn-group">
+              <a class="btn" href="#contact" data-topic="Websites and online visibility">Enquire about your website &rarr;</a>
+              <a class="btn ghost" href="#services">View all services</a>
+            </div>
+          </div>
+          <div class="panel-right">
+            <h4>Concrete Deliverables &amp; Outcomes</h4>
+            <ul class="check-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Plain-English copywriting and conversion-focused page layout</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Mobile-first speed optimisation and technical search engine SEO setup</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Local business directory &amp; search listing alignment across major search engines</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Full ownership of your domain, hosting and content—no lock-in</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Unified "The RFB Standard" & How We Work Section -->
+    <section class="navy-band" id="standard">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="eyebrow">The RFB Standard</div>
+          <h2>Direct advice. Zero fluff.</h2>
+          <p class="lead">If a simple, low-cost tool solves your problem, we’ll recommend it and set it up properly. If we’re not the right fit, we’ll say so on day one.</p>
+        </div>
+
+        <div class="standard-grid">
+          <article class="std-card">
+            <h3>Direct advice</h3>
+            <p>Simple, practical answers. We recommend proven off-the-shelf tools first. No over-engineering, no jargon smoke screens, and no padding the bill.</p>
+          </article>
+
+          <article class="std-card">
+            <h3>Clear communication</h3>
+            <p>We explain what we recommend, what it costs and why it matters in plain business terms—so you can make confident decisions quickly.</p>
+          </article>
+
+          <article class="std-card">
+            <h3>Vendor-neutral guidance</h3>
+            <p>Our advice follows what works for you. Never a vendor partnership kickback, a hidden commission or a monthly sales quota.</p>
+          </article>
+        </div>
+
+        <div class="std-practice">
+          <div class="std-practice-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>We’ll tell you when the cheap tool is the right answer.</span>
+          </div>
+          <div class="std-practice-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>We’ll tell you when you don’t need what a vendor is pitching.</span>
+          </div>
+          <div class="std-practice-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>We’ll tell you upfront if we’re not the right people for the job.</span>
+          </div>
+          <div class="std-practice-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>We work alongside you—we don’t hand over a strategy deck and disappear.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3-Step Approach Strip -->
+    <section id="process">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="eyebrow">The RFB Standard in Action</div>
+          <h2>Walk in. Listen. Fix.</h2>
+          <p class="lead">Most businesses don’t have a technology problem—they have a clarity problem. Here is how every engagement works from day one.</p>
+        </div>
+
+        <div class="process-grid">
+          <article class="step-card">
+            <div class="step-top">
+              <span class="step-num">01</span>
+              <span class="step-tag">Understand</span>
+            </div>
+            <h3>Listen first</h3>
+            <p>What’s the real problem? What have you already tried? What does success look like for your team? We start with a straight conversation, never a sales pitch.</p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-top">
+              <span class="step-num">02</span>
+              <span class="step-tag">Solve</span>
+            </div>
+            <h3>Practical fixes</h3>
+            <p>We recommend proven off-the-shelf tools and hands-on improvements that suit your business, budget and team—giving you clear costs before anything starts.</p>
+          </article>
+
+          <article class="step-card">
+            <div class="step-top">
+              <span class="step-num">03</span>
+              <span class="step-tag">Strengthen</span>
+            </div>
+            <h3>Leave you capable</h3>
+            <p>Your team understands the change and can maintain it confidently. You end up more capable and in control—not more dependent on us.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. 3-Tier Engagement Cards + Full Capability Scope -->
+    <section class="sec-white" id="services">
+      <div class="wrap">
+        <div class="sec-head center">
+          <div class="eyebrow">Engagement Options</div>
+          <h2>Three clear ways to work with us</h2>
+          <p class="lead">Every job starts with a straight conversation and a clear price. Engage us for a one-off advisory session, a fixed-price build, or ongoing IT leadership.</p>
+        </div>
+
+        <div class="tiers-grid">
+          <!-- Tier 1 -->
+          <article class="tier-card">
+            <span class="tier-price-tag">Free &middot; No obligation</span>
+            <h3>Initial Tech Chat</h3>
+            <p class="tier-desc">A relaxed, practical conversation about where technology is slowing you down and whether we’re the right people to help.</p>
+            <div class="tier-divider"></div>
+            <ul class="tier-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Honest assessment of your current setup</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Clear advice on what to fix, buy or skip</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Upfront fixed-price options if you want us to deliver</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Personal reply within one business day</span>
+              </li>
+            </ul>
+            <a class="btn sec" href="#contact" data-topic="IT advice and strategy">Book an initial chat</a>
+          </article>
+
+          <!-- Tier 2 (Featured) -->
+          <article class="tier-card featured">
+            <span class="tier-badge">Most Popular &middot; Start Here</span>
+            <span class="tier-price-tag">Fixed-price quotes</span>
+            <h3>Project &amp; Build Delivery</h3>
+            <p class="tier-desc">Hands-on execution for specific business bottlenecks—delivered cleanly in stages with zero surprise billing.</p>
+            <div class="tier-divider"></div>
+            <ul class="tier-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>High-converting websites &amp; online visibility</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>IT recommendations, POS &amp; software setup</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Workflow automation for quoting, booking &amp; invoicing</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Team handover so you can run it afterwards</span>
+              </li>
+            </ul>
+            <a class="btn" href="#contact" data-topic="Websites and online visibility">Scope a fixed-price project</a>
+          </article>
+
+          <!-- Tier 3 -->
+          <article class="tier-card">
+            <span class="tier-price-tag">Flexible ongoing support</span>
+            <h3>Outsourced IT &amp; Co-Management</h3>
+            <p class="tier-desc">Accountable technology leadership and day-to-day reliability for organisations without a full-time IT manager.</p>
+            <div class="tier-divider"></div>
+            <ul class="tier-list">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Outsourced or interim IT manager</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Co-management alongside your internal IT person</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Email, licences, backups &amp; supplier reviews</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>A real person who picks up when things break</span>
+              </li>
+            </ul>
+            <a class="btn sec" href="#contact" data-topic="Ongoing support">Discuss ongoing support</a>
+          </article>
+        </div>
+
+        <!-- Complete 9-Service Reference Grid -->
+        <div class="services-catalog">
+          <div class="catalog-head">
+            <div>
+              <div class="eyebrow">Full Capability Scope</div>
+              <h3>Fewer tech headaches. More time on the work.</h3>
+            </div>
+            <a class="btn sec sm" href="#contact">Discuss your situation</a>
+          </div>
+
+          <div class="catalog-grid">
+            <div class="cat-item">
+              <div>
+                <h4>IT advice and strategy</h4>
+                <p>Independent and transparent advice tailored to your stage of growth.</p>
+              </div>
+              <div class="cat-out"><span>Outcome:</span> A clear plan of what to fix, buy and skip, with costs up front.</div>
+            </div>
+
+            <div class="cat-item">
+              <div>
+                <h4>IT policies for small businesses</h4>
+                <p>Plain-English cybersecurity, acceptable use, device, password, and data handling policies tailored for small teams.</p>
+              </div>
+              <div class="cat-out"><span>What this means:</span> Clear, practical rules your staff actually read and follow—without corporate red tape.</div>
+            </div>
+
+            <div class="cat-item">
+              <div>
+                <h4>IT recommendations</h4>
+                <p>Independent hardware, software, cloud, and vendor recommendations tailored to your budget and workflows.</p>
+              </div>
+              <div class="cat-out"><span>Result:</span> Clear, unbiased buying advice before you spend a dollar.</div>
+            </div>
+
+            <div class="cat-item">
+              <div>
+                <h4>Websites and online visibility</h4>
+                <p>Design, build and multi-search-engine visibility setup in one place.</p>
+              </div>
+              <div class="cat-out"><span>Delivered:</span> A fast site that shows up when people search online and turns visits into enquiries.</div>
+            </div>
+
+            <div class="cat-item">
+              <div>
+                <h4>Software, POS and tool selection</h4>
+                <p>We compare options and negotiate with suppliers if needed.</p>
+              </div>
+              <div class="cat-out"><span>What you gain:</span> The right tool, set up properly, without paying for extras.</div>
+            </div>
+
+            <div class="cat-item">
+              <div>
+                <h4>Automation and process efficiency</h4>
+                <p>Quoting, scheduling, invoicing and repeat data entry.</p>
+              </div>
+              <div class="cat-out"><span>Outcome:</span> Hours back every week from repeat admin.</div>
+            </div>
+
+            <div class="cat-item">
+              <div>
+                <h4>Outsourced IT manager</h4>
+                <p>IT management for businesses without an in-house IT manager.</p>
+              </div>
+              <div class="cat-out"><span>What this means:</span> One accountable person running IT, reporting to you in plain terms.</div>
+            </div>
+
+            <div class="cat-item">
+              <div>
+                <h4>IT co-management</h4>
+                <p>We work alongside your existing IT person or internal team.</p>
+              </div>
+              <div class="cat-out"><span>Result:</span> Extra expertise and a second opinion without replacing your team.</div>
+            </div>
+
+            <div class="cat-item">
+              <div>
+                <h4>Digital transformation</h4>
+                <p>Planned in manageable stages and delivered hands-on.</p>
+              </div>
+              <div class="cat-out"><span>Delivered:</span> Change that sticks, with your team able to run it afterwards.</div>
+            </div>
+
+            <div class="cat-item">
+              <div>
+                <h4>Ongoing support</h4>
+                <p>Licensing, devices, email, backups and day-to-day help.</p>
+              </div>
+              <div class="cat-out"><span>What you gain:</span> A real person who picks up when something breaks.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Who We Help Industry Grid (GBTech 3x2 Clean Cards) -->
+    <section id="who-we-help">
+      <div class="wrap">
+        <div class="sec-head">
+          <div class="eyebrow">Who we help</div>
+          <h2>Built for people who’d rather run their business</h2>
+          <p class="lead">From sole traders in the New England Region to scaling organisations across Australia—most clients arrive by word of mouth because someone they trust got straight help without breaking the bank.</p>
+        </div>
+
+        <div class="industry-grid">
+          <a class="ind-card" href="#contact" data-topic="Websites and online visibility">
+            <div>
+              <div class="ind-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              </div>
+              <h3>Small businesses &amp; trades</h3>
+              <p>A fast website, stronger online visibility across search engines, a POS/CMS system, or someone to sort out email, quoting and booking that run themselves.</p>
+            </div>
+            <span class="ind-link">Ask about getting set up &rarr;</span>
+          </a>
+
+          <a class="ind-card" href="#contact" data-topic="Automation and admin">
+            <div>
+              <div class="ind-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+              </div>
+              <h3>Startups &amp; growing teams</h3>
+              <p>Systems that keep up as you hire and scale—connecting your tools so your team stops losing hours to manual double-handling.</p>
+            </div>
+            <span class="ind-link">Streamline your stack &rarr;</span>
+          </a>
+
+          <a class="ind-card" href="#contact" data-topic="IT advice and strategy">
+            <div>
+              <div class="ind-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+              </div>
+              <h3>Charities &amp; not-for-profits</h3>
+              <p>Independent oversight, contract and supplier reviews, and plain board-ready reporting that stretches every dollar with zero vendor agenda.</p>
+            </div>
+            <span class="ind-link">Ask about advisory &rarr;</span>
+          </a>
+
+          <a class="ind-card" href="#contact" data-topic="Interim IT manager">
+            <div>
+              <div class="ind-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              </div>
+              <h3>Schools &amp; education</h3>
+              <p>Reliable systems, risk and backup continuity, and interim IT management while you recruit or transition infrastructure.</p>
+            </div>
+            <span class="ind-link">Discuss school IT support &rarr;</span>
+          </a>
+
+          <a class="ind-card" href="#contact" data-topic="Interim IT manager">
+            <div>
+              <div class="ind-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              </div>
+              <h3>Established organisations</h3>
+              <p>No CTO, or technology that underperforms? We step in as your accountable IT lead to audit suppliers, cut waste and run things properly.</p>
+            </div>
+            <span class="ind-link">Explore IT leadership &rarr;</span>
+          </a>
+
+          <a class="ind-card" href="#contact" data-topic="Ongoing support">
+            <div>
+              <div class="ind-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              </div>
+              <h3>Teams with existing IT</h3>
+              <p>Co-management alongside your internal IT person—providing senior project backup, second opinions and holiday cover without replacing staff.</p>
+            </div>
+            <span class="ind-link">Learn about co-management &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. About & Regional Credibility Section -->
+    <section class="sec-white" id="about">
+      <div class="wrap about-split">
+        <div>
+          <div class="eyebrow">About RFB Services</div>
+          <h2>Technology should solve problems, not create them.</h2>
+          <p class="lead">RFB Services is an independent IT consultancy based in the New England Region, working with businesses, charities and schools across Australia.</p>
+          <p style="color:var(--mut);margin-top:14px">We fix what’s broken, improve what’s slow and build what’s missing. You know when something isn’t working—things feel clunky, tools don’t talk to each other, and your team loses hours to jobs that should run themselves.</p>
+
+          <div class="metrics-row">
+            <div class="metric-box">
+              <strong>100%</strong>
+              <span>Vendor-independent advice</span>
+            </div>
+            <div class="metric-box">
+              <strong>1 Day</strong>
+              <span>Personal reply guarantee</span>
+            </div>
+            <div class="metric-box">
+              <strong>AU-Wide</strong>
+              <span>New England based</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="manifesto-card">
+          <div class="eyebrow">Why we exist</div>
+          <blockquote>“We listen first, work out the real issue, and tell you straight whether we can help.”</blockquote>
+          <p style="color:var(--mut);font-size:15px;margin-bottom:24px">Whether you need a second opinion on a supplier quote, a website that actually generates local enquiries, or an outsourced IT manager you can call directly, you deal with a real practitioner from start to finish.</p>
+          <div class="btn-group">
+            <a class="btn" href="#contact">Start a conversation</a>
+            <a class="btn sec" href="#services">Explore services</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. Low-Friction Embedded Contact & Enquiry Section -->
+    <section id="contact">
+      <div class="wrap contact-split">
+        <div>
+          <div class="eyebrow">Get in touch</div>
+          <h2>Let’s start a conversation.</h2>
+          <p class="lead">A relaxed, no-obligation chat about where tech is slowing you down. Get in touch with any tech-related enquiry and I will personally reply within one business day.</p>
+
+          <div class="contact-details">
+            <div class="c-detail-item">
+              <div class="c-detail-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </div>
+              <div>
+                <small>Direct Email</small>
+                <a href="mailto:Hello@rfbservices.com.au">Hello@rfbservices.com.au</a>
+              </div>
+            </div>
+
+            <div class="c-detail-item">
+              <div class="c-detail-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div>
+                <small>Location &amp; Coverage</small>
+                <span>New England Region, NSW &middot; Working Australia-wide</span>
+              </div>
+            </div>
+
+            <div class="c-detail-item">
+              <div class="c-detail-icon">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <div>
+                <small>Our Promise</small>
+                <span>Plain English. Upfront pricing. Zero vendor lock-in.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <form class="form-card" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="fName">Your name *</label>
+              <input id="fName" name="name" autocomplete="name" placeholder="Jane Smith" required>
+            </div>
+            <div class="field">
+              <label for="fOrg">Business or organisation</label>
+              <input id="fOrg" name="organisation" autocomplete="organization" placeholder="Smith &amp; Co">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label for="fEmail">Your email *</label>
+              <input id="fEmail" name="email" type="email" autocomplete="email" placeholder="jane@company.com.au" required>
+            </div>
+            <div class="field">
+              <label for="fTopic">What’s it about?</label>
+              <select id="fTopic" name="topic">
+                <option value="Not sure yet">Not sure yet</option>
+                <option value="IT advice and strategy">IT advice and strategy</option>
+                <option value="IT policies for small businesses">IT policies for small businesses</option>
+                <option value="IT recommendations">IT recommendations</option>
+                <option value="Websites and online visibility">Websites and online visibility</option>
+                <option value="Software and tool selection">Software and tool selection</option>
+                <option value="Automation and admin">Automation and admin</option>
+                <option value="Interim IT manager">Interim IT manager</option>
+                <option value="Ongoing support">Ongoing support</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="fMsg">How can we help? *</label>
+            <textarea id="fMsg" name="message" rows="4" placeholder="Tell us briefly what is slowing you down or what you are trying to sort out..." required></textarea>
+          </div>
+
+          <div class="alert-box" id="formAlert" role="alert"></div>
+
+          <button class="btn" type="submit" style="width:100%">
+            Send enquiry
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+
+          <p class="form-note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            Opens your email app with your details pre-filled to Hello@rfbservices.com.au.
+          </p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Multi-Column B2B Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="#home" aria-label="RFB Services home">
+            <svg viewBox="0 0 322 52" aria-hidden="true" style="height:28px"><use href="#lg"/></svg>
+          </a>
+          <p>Turn Tech Problems Into Business Advantages. Independent IT advice, websites and hands-on support based in the New England Region.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#problem-finder">Solutions</a></li>
+            <li><a href="#standard">The RFB Standard</a></li>
+            <li><a href="#who-we-help">Who We Help</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Core Solutions</h4>
+          <ul>
+            <li><a href="#contact" data-topic="IT advice and strategy">IT advice and strategy</a></li>
+            <li><a href="#contact" data-topic="IT policies for small businesses">IT policies for small businesses</a></li>
+            <li><a href="#contact" data-topic="IT recommendations">IT recommendations</a></li>
+            <li><a href="#contact" data-topic="Websites and online visibility">Websites and online visibility</a></li>
+            <li><a href="#contact" data-topic="Software and tool selection">Software, POS and tool selection</a></li>
+            <li><a href="#contact" data-topic="Automation and admin">Automation and process efficiency</a></li>
+            <li><a href="#contact" data-topic="Interim IT manager">Outsourced IT manager</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:Hello@rfbservices.com.au">Hello@rfbservices.com.au</a></li>
+            <li><span>New England Region, NSW</span></li>
+            <li><span>Serving clients Australia-wide</span></li>
+            <li><a href="#contact" style="font-weight:700;color:var(--brand)">Start a conversation &rarr;</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 RFB Services. ABN 62 703 478 639</span>
+        <span>Independent IT Consultancy &middot; Plain English &middot; Vendor-Neutral</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const doc = document;
+
+      // 1. Mobile Navigation Drawer Logic
+      const menuBtn = doc.getElementById('menuBtn');
+      const closeBtn = doc.getElementById('closeBtn');
+      const drawer = doc.getElementById('drawer');
+      const scrim = doc.getElementById('scrim');
+
+      function toggleDrawer(open) {
+        drawer.classList.toggle('open', open);
+        scrim.classList.toggle('open', open);
+        menuBtn.setAttribute('aria-expanded', String(open));
+        if (open) {
+          closeBtn.focus();
+        } else {
+          menuBtn.focus();
+        }
+      }
+
+      menuBtn.addEventListener('click', () => toggleDrawer(true));
+      closeBtn.addEventListener('click', () => toggleDrawer(false));
+      scrim.addEventListener('click', () => toggleDrawer(false));
+
+      drawer.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          drawer.classList.remove('open');
+          scrim.classList.remove('open');
+          menuBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // Desktop Solutions Dropdown Keyboard/Click Accessibility
+      const solDrop = doc.getElementById('solDrop');
+      const solBtn = solDrop.querySelector('.nav-drop-btn');
+      solBtn.addEventListener('click', () => {
+        const isOpen = solDrop.classList.toggle('open');
+        solBtn.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      doc.addEventListener('click', (e) => {
+        if (!solDrop.contains(e.target)) {
+          solDrop.classList.remove('open');
+          solBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      doc.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          if (drawer.classList.contains('open')) toggleDrawer(false);
+          if (solDrop.classList.contains('open')) {
+            solDrop.classList.remove('open');
+            solBtn.setAttribute('aria-expanded', 'false');
+          }
+        }
+      });
+
+      // 2. Interactive "Start With the Problem" Tabbed Switcher Data & Renderer
+      const problemData = {
+        website: {
+          quote: '“My website isn’t bringing in work”',
+          title: 'Websites and online visibility',
+          desc: 'Design, build and search visibility setup in one place. No bloated agency retainers or confusing technical jargon—just a clean, high-converting site your customers actually find across search engines.',
+          youGet: 'A fast site that shows up when people search online and turns visits into enquiries.',
+          topic: 'Websites and online visibility',
+          ctaLabel: 'Enquire about your website →',
+          outcomes: [
+            'Plain-English copywriting and conversion-focused page layout',
+            'Mobile-first speed optimisation and technical search engine SEO setup',
+            'Local business directory & search listing alignment across major search engines',
+            'Full ownership of your domain, hosting and content—no lock-in'
+          ]
+        },
+        automation: {
+          quote: '“Too much manual admin”',
+          title: 'Automation and process efficiency',
+          desc: 'Quoting, scheduling, invoicing and repeat data entry shouldn’t eat up your evenings. We connect the tools you already use so routine steps run themselves reliably.',
+          youGet: 'Hours back every week from repeat admin—with fewer human errors.',
+          topic: 'Automation and admin',
+          ctaLabel: 'Fix manual admin bottlenecks →',
+          outcomes: [
+            'Automated enquiry-to-quote and booking workflows',
+            'Connecting CRM, job management, email and accounting tools',
+            'Eliminating double data entry across spreadsheets and apps',
+            'Simple documentation so your staff know how everything works'
+          ]
+        },
+        strategy: {
+          quote: '“I’m not sure our IT is sound”',
+          title: 'IT advice and strategy',
+          desc: 'Independent, plain-English oversight of your systems, security, backups and supplier contracts—without anyone trying to sell you hardware or commissions.',
+          youGet: 'A clear plan of what to fix, buy and skip, with upfront costs.',
+          topic: 'IT advice and strategy',
+          ctaLabel: 'Book an independent IT review →',
+          outcomes: [
+            'Audit of existing subscriptions, licences and supplier contracts',
+            'Practical check on backups, email security and business continuity',
+            'Second opinion on vendor quotes before you sign anything',
+            'Prioritised 90-day roadmap tailored to your budget'
+          ]
+        },
+        policies: {
+          quote: '“We don’t have clear rules for devices, passwords or data”',
+          title: 'IT policies for small businesses',
+          desc: 'Practical, plain-English cybersecurity, acceptable use, device, and data handling policies tailored specifically for small teams—giving you clarity and protection without bloated corporate red tape.',
+          youGet: 'Clear, practical IT policies your team actually understands and follows—ready for onboarding, audits and insurance.',
+          topic: 'IT policies for small businesses',
+          ctaLabel: 'Ask about small business IT policies →',
+          outcomes: [
+            'Plain-English Cybersecurity & Password / MFA policy',
+            'Acceptable Use, Company Device & BYOD guidelines',
+            'Customer Data Handling, Privacy & Breach Response checklist',
+            'Simple staff onboarding & offboarding IT checklist'
+          ]
+        },
+        software: {
+          quote: '“Which software or hardware should I buy?”',
+          title: 'IT recommendations, software & POS selection',
+          desc: 'Choosing the wrong platform or hardware is expensive and disruptive. We provide unbiased IT recommendations, compare real costs, negotiate with suppliers and set everything up properly.',
+          youGet: 'Clear, unbiased buying advice and the right tools set up properly before you spend a dollar.',
+          topic: 'IT recommendations',
+          ctaLabel: 'Get unbiased IT recommendations →',
+          outcomes: [
+            'Independent hardware, software, cloud and vendor recommendations',
+            'Clear breakdown of total licensing, onboarding and hidden fees',
+            'Clean data migration and hands-on configuration',
+            'Practical staff training so adoption actually sticks'
+          ]
+        },
+        managed: {
+          quote: '“We need someone to run IT”',
+          title: 'Outsourced IT manager & co-management',
+          desc: 'Whether you have no IT manager or want senior backup alongside your existing IT person, we provide accountable leadership and day-to-day support.',
+          youGet: 'One accountable person running IT, reporting to you in plain terms.',
+          topic: 'Interim IT manager',
+          ctaLabel: 'Discuss IT management →',
+          outcomes: [
+            'Outsourced or interim IT manager for growing teams, schools & charities',
+            'Co-management alongside your internal IT staff when extra hands are needed',
+            'Device, email, user onboarding and licensing management',
+            'A real person who picks up the phone when something breaks'
+          ]
+        }
+      };
+
+      const tabButtons = doc.querySelectorAll('.tab-btn');
+      const problemPanel = doc.getElementById('problemPanel');
+      const topicSelect = doc.getElementById('fTopic');
+
+      function renderProblemTab(key) {
+        const item = problemData[key];
+        if (!item) return;
+
+        tabButtons.forEach(btn => {
+          btn.setAttribute('aria-selected', String(btn.dataset.tab === key));
+        });
+
+        const checksHtml = item.outcomes.map(text => `
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <span>${text}</span>
+          </li>
+        `).join('');
+
+        problemPanel.innerHTML = `
+          <div class="panel-left">
+            <span class="panel-quote">${item.quote}</span>
+            <h3>${item.title}</h3>
+            <p>${item.desc}</p>
+            <div class="you-get-box">
+              <small>What you get</small>
+              <strong>${item.youGet}</strong>
+            </div>
+            <div class="btn-group">
+              <a class="btn" href="#contact" data-topic="${item.topic}">${item.ctaLabel}</a>
+              <a class="btn ghost" href="#services">View all services</a>
+            </div>
+          </div>
+          <div class="panel-right">
+            <h4>Concrete Deliverables &amp; Outcomes</h4>
+            <ul class="check-list">${checksHtml}</ul>
+          </div>
+        `;
+
+        // Re-bind topic pre-fill listener on newly rendered CTA
+        problemPanel.querySelectorAll('[data-topic]').forEach(bindTopicPreFill);
+      }
+
+      tabButtons.forEach(btn => {
+        btn.addEventListener('click', () => renderProblemTab(btn.dataset.tab));
+      });
+
+      // Allow dropdown/hero cards to activate a specific problem tab smoothly
+      doc.querySelectorAll('[data-select-tab]').forEach(trigger => {
+        trigger.addEventListener('click', () => {
+          const tabKey = trigger.dataset.selectTab;
+          renderProblemTab(tabKey);
+          solDrop.classList.remove('open');
+          solBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // 3. Topic Pre-Fill Helper for Contact Form
+      function bindTopicPreFill(el) {
+        el.addEventListener('click', () => {
+          const topic = el.dataset.topic;
+          if (topic && topicSelect) {
+            topicSelect.value = topic;
+          }
+        });
+      }
+
+      doc.querySelectorAll('[data-topic]').forEach(bindTopicPreFill);
+
+      // 4. Contact Form Validation & Mailto Handoff (Zero alert() usage)
+      const contactForm = doc.getElementById('contactForm');
+      const formAlert = doc.getElementById('formAlert');
+
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const nameInput = doc.getElementById('fName');
+        const orgInput = doc.getElementById('fOrg');
+        const emailInput = doc.getElementById('fEmail');
+        const msgInput = doc.getElementById('fMsg');
+
+        const name = nameInput.value.trim();
+        const org = orgInput.value.trim();
+        const email = emailInput.value.trim();
+        const topic = topicSelect.value;
+        const msg = msgInput.value.trim();
+
+        formAlert.className = 'alert-box';
+        formAlert.textContent = '';
+
+        if (!name || !email || !msg) {
+          formAlert.className = 'alert-box err';
+          formAlert.textContent = 'Please add your name, your email address, and a short note about how we can help.';
+          (!name ? nameInput : !email ? emailInput : msgInput).focus();
+          return;
+        }
+
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+          formAlert.className = 'alert-box err';
+          formAlert.textContent = 'Please enter a valid email address so we can reply to you.';
+          emailInput.focus();
+          return;
+        }
+
+        formAlert.className = 'alert-box ok';
+        formAlert.textContent = 'Opening your email app with your enquiry ready to send to Hello@rfbservices.com.au...';
+
+        const subject = `Enquiry: ${topic}`;
+        const bodyLines = [
+          `Name: ${name}`,
+          `Organisation: ${org || 'Not specified'}`,
+          `Email: ${email}`,
+          `Topic: ${topic}`,
+          '',
+          msg
+        ];
+
+        window.location.href = `mailto:Hello@rfbservices.com.au?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+      });
+    })();
+  </script>
+</body>
+</html>
